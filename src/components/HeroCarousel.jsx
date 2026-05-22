@@ -5,34 +5,33 @@ export default function HeroCarousel() {
   const slides = [
   {
     img: "/images/hero-brand.jpg",
-    alt: "Spreading smiles among village children through donations",
-    title: "India’s First Village Fundraising Platform",
-    text: "Built to support villages with dignity, trust, and transparency",
-    btn: "Explore Causes"
+    alt: "Helping students through scholarships",
+    title: "India’s Trusted Scholarship Platform",
+    text: "Supporting deserving students with trust, dignity, and transparency",
+    btn: "Explore Scholarships"
   },
   {
     img: "/images/hero1.jpg",
-    alt: "Community support and village development through Donifi donations",
-    title: "Your village still needs you",
-    text: "Support real people from the place that shaped you",
-    btn: "Donate Now"
+    alt: "Helping students achieve their education goals",
+    title: "Students still need your support",
+    text: "Support students whose dreams depend on education",
+    btn: "Sponsor Now"
   },
   {
     img: "/images/hero2.jpg",
-    alt: "Empowering rural communities through trusted village fundraising",
-    title: "Small help. Real dignity.",
-    text: "Verified needs from villages you belong to",
-    btn: "Give Back"
+    alt: "Empowering students through scholarship funding",
+    title: "Small help. Real future.",
+    text: "Verified scholarship requests from deserving students",
+    btn: "Provide Scholarship"
   },
   {
     img: "/images/hero3.jpg",
-    alt: "Donifi connecting donors with village development initiatives",
-    title: "Give locally. Change lives.",
-    text: "Your roots. Your people. Your responsibility.",
-    btn: "Help Now"
+    alt: "Connecting sponsors with students in need",
+    title: "Give education. Change lives.",
+    text: "Your support can create a brighter future for students",
+    btn: "Help a Student"
   }
 ];
-
 
   const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);

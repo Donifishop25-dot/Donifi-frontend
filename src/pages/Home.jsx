@@ -50,10 +50,10 @@ const { user } = useAuth();
 
       {/* ================= PAGE META ================= */}
       <Helmet>
-        <title>Donifi – Give Back to Your Village</title>
+        <title>Donifi – Empower Students Through Scholarships</title>
         <meta
           name="description"
-          content="Give back to your village. Support real people and real needs with dignity."
+          content="Provide scholarships to deserving students. Support real education needs with dignity."
         />
       </Helmet>
 
@@ -98,17 +98,17 @@ const { user } = useAuth();
   }}
 >
 
-    Everyone Has a Connection To a Village
+    Everyone Believes in the Power of Education
   </h2>
 
   <p className="section-lead">
-    It is a place we may leave for education, work, or better opportunities.
-But it always stays in our hearts.
+    Education is the bridge that lifts students out of hardship and opens doors
+to a better life — yet for many, it remains out of reach.
   </p>
 
   <p className="section-text">
-    While our lives move forward, villages often stay behind.
-Families still struggle for basic needs and a dignified life.
+    While our careers move forward, many bright students still struggle to afford
+tuition, books, and the basics needed to keep learning.
   </p>
   <div
   style={{
@@ -143,7 +143,7 @@ Families still struggle for basic needs and a dignified life.
 
         <h5 style={{ color: "#0B2A4A", fontWeight: 700 }}>
 🌱 Local Support</h5>
-        <p>Support people from your own village.</p>
+        <p>Support deserving students from your own community.</p>
       </div>
     </div>
 
@@ -195,148 +195,11 @@ Families still struggle for basic needs and a dignified life.
   </p>
 </section>
 
-{/* ================= WHO WE HELP (RESPONSIVE AUTO SLIDE) ================= */}
-<section
-  className="animate fade-up"
-  style={{
-    padding: "clamp(3rem, 7vw, 5rem) 1rem"
-  }}
->
-
-  {/* ROUNDED WHITE CONTAINER */}
-  <div
-    style={{
-      background: "#ffffff",
-      borderRadius: "32px",
-      padding: "clamp(2.5rem, 6vw, 4rem) 0",
-      maxWidth: "1200px",
-      margin: "0 auto",
-      boxShadow: "0 18px 45px rgba(0,0,0,0.08)",
-      overflow: "hidden"
-    }}
-  >
-    {/* Heading */}
-    <div
-      style={{
-        textAlign: "center",
-        marginBottom: "clamp(1.8rem, 4vw, 3rem)",
-        padding: "0 1rem"
-      }}
-    >
-      <h2 className="section-heading">Who We Help</h2>
-      <p className="section-text mt-2">
-        Donifi supports anyone facing genuine challenges
-      </p>
-    </div>
-
-    {/* VIEWPORT */}
-    <div style={{ width: "100%", overflow: "hidden" }}>
-      {/* TRACK */}
-      <div
-        className="who-help-track"
-        onMouseEnter={e =>
-          (e.currentTarget.style.animationPlayState = "paused")
-        }
-        onMouseLeave={e =>
-          (e.currentTarget.style.animationPlayState = "running")
-        }
-        style={{
-          display: "flex",
-          gap: "clamp(16px, 3vw, 28px)",
-          width: "max-content",
-          animation: "whoHelpScroll 30s linear infinite"
-        }}
-      >
-        {[
-          { t: "Families in Crisis", i: "https://cdn-icons-png.flaticon.com/512/3021/3021872.png" },
-          { t: "Medical Assistance", i: "https://cdn-icons-png.flaticon.com/512/2966/2966486.png" },
-          { t: "Students", i: "https://cdn-icons-png.flaticon.com/512/3135/3135755.png" },
-          { t: "Seniors", i: "https://cdn-icons-png.flaticon.com/512/12631/12631672.png" },
-          { t: "Daily-wage Workers", i: "https://cdn-icons-png.flaticon.com/512/921/921347.png" },
-          { t: "Women in Hardship", i: "https://cdn-icons-png.flaticon.com/512/94/94749.png" },
-          { t: "People Who Lost Jobs", i: "https://cdn-icons-png.flaticon.com/512/8774/8774591.png" },
-          { t: "Orphans & NGOs", i: "https://cdn-icons-png.flaticon.com/512/9648/9648957.png" },
-
-          /* duplicate for infinite loop */
-          { t: "Families in Crisis", i: "https://cdn-icons-png.flaticon.com/512/3021/3021872.png" },
-          { t: "Medical Assistance", i: "https://cdn-icons-png.flaticon.com/512/2966/2966486.png" },
-          { t: "Students", i: "https://cdn-icons-png.flaticon.com/512/3135/3135755.png" },
-          { t: "Seniors", i: "https://cdn-icons-png.flaticon.com/512/12631/12631672.png" }
-        ].map((item, idx) => (
-          <div
-            key={idx}
-            style={{
-              width: "clamp(130px, 28vw, 180px)",
-              height: "clamp(130px, 28vw, 180px)",
-              background: "#F3F7FF",
-border: "1px solid rgba(30,111,255,0.15)",
-
-              borderRadius: "22px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              flexShrink: 0,
-              padding: "0.75rem",
-              transition: "all 0.25s ease"
-            }}
-          >
-            <img
-              src={item.i}
-              alt={item.t}
-              style={{
-                width: "clamp(36px, 8vw, 52px)",
-                marginBottom: "10px"
-              }}
-            />
-            <h6
-              style={{
-                fontWeight: 500,
-                fontSize: "clamp(0.75rem, 3.2vw, 0.95rem)",
-                lineHeight: 1.25
-              }}
-            >
-              {item.t}
-            </h6>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    {/* Footer */}
-    <p
-      className="section-text text-center"
-      style={{
-        marginTop: "clamp(1.5rem, 4vw, 2.5rem)",
-        padding: "0 1rem"
-      }}
-    >
-      If someone needs help, Donifi connects them with people willing to support them.
-    </p>
-
-    {/* KEYFRAMES */}
-    <style>
-      {`
-        @keyframes whoHelpScroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-
-        @media (max-width: 768px) {
-          .who-help-track {
-            animation-duration: 40s !important;
-          }
-        }
-      `}
-    </style>
-  </div>
-</section>
 
 
-      {/* ================= WHY GIVE BACK ================= */}
+      {/* ================= WHY SPONSOR A STUDENT ================= */}
       <section className="section-block animate fade-up">
-  <h2 className="section-heading">🏡 Why Give Back to Your Village?</h2>
+  <h2 className="section-heading">🎓 Why Sponsor a Student’s Education?</h2>
 
   <div className="why-grid">
   <span
@@ -349,7 +212,7 @@ border: "1px solid rgba(30,111,255,0.15)",
     fontWeight: 600
   }}
 >
-Your roots are there</span>
+Education changed your life</span>
   <span
   style={{
     background: "#F3F7FF",
@@ -360,7 +223,7 @@ Your roots are there</span>
     fontWeight: 600
   }}
 >
-Your identity began there</span>
+Someone believed in you once</span>
   <span
   style={{
     background: "#F3F7FF",
@@ -371,11 +234,11 @@ Your identity began there</span>
     fontWeight: 600
   }}
 >
-Your success is built on that foundation</span>
+A scholarship can transform a future</span>
 </div>
 
   <p className="section-strong mt-3">
-    Giving back is not an obligation.<br />
+    Sponsoring a student is not an obligation.<br />
     It is gratitude in action.
   </p>
 </section>
@@ -386,8 +249,8 @@ Your success is built on that foundation</span>
         <h2 className="section-heading">🌱 Our Belief</h2>
 
         <p className="section-text">
-          If every person supports just one need in their village,
-          no village in India will be left behind.
+          If every person sponsors just one student’s education,
+          no deserving student in India will be left behind.
         </p>
       </section>
 
